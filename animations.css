@@ -1,0 +1,256 @@
+/* Animations for the portfolio website */
+
+/* Fade in */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade in up */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade in down */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Fade in left */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Fade in right */
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Scale up */
+  @keyframes scaleUp {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Bounce */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Float */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Pulse */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: var(--shadow-lg);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(110, 87, 224, 0.4);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+  
+  /* Rotate */
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-primary) }
+  }
+  
+  /* Apply animations to elements */
+  .animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+  }
+  
+  /* Animation classes */
+  .fade-in { animation-name: fadeIn; }
+  .fade-in-up { animation-name: fadeInUp; }
+  .fade-in-down { animation-name: fadeInDown; }
+  .fade-in-left { animation-name: fadeInLeft; }
+  .fade-in-right { animation-name: fadeInRight; }
+  .scale-up { animation-name: scaleUp; }
+  .bounce { animation-name: bounce; }
+  .float { animation-name: float; animation-duration: 3s; animation-iteration-count: infinite; }
+  .pulse { animation-name: pulse; animation-duration: 2s; animation-iteration-count: infinite; }
+  .rotate { animation-name: rotate; animation-duration: 8s; animation-iteration-count: infinite; animation-timing-function: linear; }
+  
+  /* Animation delays */
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+  .delay-4 { animation-delay: 0.4s; }
+  .delay-5 { animation-delay: 0.5s; }
+  .delay-6 { animation-delay: 0.6s; }
+  
+  /* Animation for hero elements */
+  .hero__text h1,
+  .hero__text h2,
+  .hero__text p {
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .hero__text h2 {
+    animation-delay: 0.2s;
+  }
+  
+  .hero__text p {
+    animation-delay: 0.3s;
+  }
+  
+  .hero__buttons {
+    animation: fadeInUp 1s ease 0.4s forwards;
+    opacity: 0;
+  }
+  
+  .hero__image {
+    animation: scaleUp 1s ease 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .hero__social {
+    animation: fadeInLeft 1s ease 0.5s forwards;
+    opacity: 0;
+  }
+  
+  /* Section animations */
+  .section__header {
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  /* Animate on scroll - These will be activated via JavaScript */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1s ease;
+  }
+  
+  .reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 1s ease;
+  }
+  
+  .reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .reveal-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 1s ease;
+  }
+  
+  .reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Staggered animation for grid items */
+  .staggered-item {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  /* Apply different delays to staggered items */
+  .staggered-item:nth-child(1) { animation-delay: 0.1s; }
+  .staggered-item:nth-child(2) { animation-delay: 0.2s; }
+  .staggered-item:nth-child(3) { animation-delay: 0.3s; }
+  .staggered-item:nth-child(4) { animation-delay: 0.4s; }
+  .staggered-item:nth-child(5) { animation-delay: 0.5s; }
+  .staggered-item:nth-child(6) { animation-delay: 0.6s; }
+  .staggered-item:nth-child(7) { animation-delay: 0.7s; }
+  .staggered-item:nth-child(8) { animation-delay: 0.8s; }

@@ -1,0 +1,179 @@
+/* Theme Styles for Light and Dark modes */
+
+/* Dark Theme (Default) */
+.dark-theme {
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0a0a0;
+    --color-background: #121212;
+    --color-background-secondary: #1a1a1a;
+    --color-background-tertiary: #222222;
+    --color-border: #333333;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Light Theme */
+  .light-theme {
+    --color-text-primary: #212529;
+    --color-text-secondary: #6c757d;
+    --color-background: #ffffff;
+    --color-background-secondary: #f8f9fa;
+    --color-background-tertiary: #e9ecef;
+    --color-border: #dee2e6;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Apply theme colors */
+  body {
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  .header.scrolled {
+    background-color: var(--color-background);
+    box-shadow: 0 5px 15px var(--color-shadow);
+  }
+  
+  .header__logo .logo {
+    color: var(--color-text-primary);
+  }
+  
+  .nav__link {
+    color: var(--color-text-secondary);
+  }
+  
+  .nav__link:hover,
+  .nav__link.active {
+    color: var(--color-primary);
+  }
+  
+  .section__title {
+    color: var(--color-text-primary);
+  }
+  
+  .hero__subtitle {
+    color: var(--color-text-secondary);
+  }
+  
+  .hero__description {
+    color: var(--color-text-secondary);
+  }
+  
+  .social-icon {
+    background-color: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+  }
+  
+  .services {
+    background-color: var(--color-background-secondary);
+  }
+  
+  .service-card {
+    background-color: var(--color-background);
+    box-shadow: 0 10px 20px var(--color-shadow);
+  }
+  
+  .service-card p {
+    color: var(--color-text-secondary);
+  }
+  
+  .about__text p {
+    color: var(--color-text-secondary);
+  }
+  
+  .info-title {
+    color: var(--color-text-primary);
+  }
+  
+  .info-value {
+    color: var(--color-text-secondary);
+  }
+  
+  .tab-btn {
+    background-color: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+  }
+  
+  .skill-bar {
+    background-color: var(--color-background-tertiary);
+  }
+  
+  .portfolio {
+    background-color: var(--color-background-secondary);
+  }
+  
+  .filter-btn {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  .portfolio__item {
+    background-color: var(--color-background);
+    box-shadow: 0 10px 20px var(--color-shadow);
+  }
+  
+  .blog__card {
+    background-color: var(--color-background);
+    box-shadow: 0 10px 20px var(--color-shadow);
+  }
+  
+  .blog__category {
+    background-color: var(--color-background-tertiary);
+  }
+  
+  .blog__title a {
+    color: var(--color-text-primary);
+  }
+  
+  .blog__excerpt {
+    color: var(--color-text-secondary);
+  }
+  
+  .contact {
+    background-color: var(--color-background-secondary);
+  }
+  
+  .contact__form-container {
+    background-color: var(--color-background);
+    box-shadow: 0 10px 20px var(--color-shadow);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    border-color: var(--color-border);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  .modal-content {
+    background-color: var(--color-background);
+  }
+  
+  .close-modal {
+    color: var(--color-text-primary);
+  }
+  
+  .project-info ul li {
+    border-color: var(--color-border);
+  }
+  
+  .project-info ul li strong {
+    color: var(--color-text-primary);
+  }
+  
+  .project-description p,
+  .project-description ul li {
+    color: var(--color-text-secondary);
+  }
+  
+  .hamburger .bar {
+    background-color: var(--color-text-primary);
+  }
+  
+  .nav__list {
+    background-color: var(--color-background);
+  }
+  
+  /* Preloader Theme */
+  .preloader {
+    background-color: var(--color-background);
+  }

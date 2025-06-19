@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mehulchauhan.com/sitemap.xml
+
+# Prevent access to administrative areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/

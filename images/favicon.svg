@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    path { fill: #6e57e0; }
+    @media (prefers-color-scheme: dark) {
+      path { fill: #8a77f0; }
+    }
+  </style>
+  <path d="M40 20h20v60H40z"/>
+  <path d="M20 40h60v20H20z"/>
+  <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="6"/>
+</svg>

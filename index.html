@@ -3,710 +3,1299 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mehul Chauhan - Full-Stack Developer & UI/UX Designer specializing in React, Next.js, and modern web technologies based in Gujarat, India.">
+    <meta name="keywords"
+        content="web developer, full stack, React developer, Next.js, UI design, portfolio, Gujarat, India">
+    <meta name="author" content="Mehul Chauhan">
+    <title>Mehul Chauhan | Full-Stack Developer</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="theme.css">
+    <!-- Animations CSS -->
+    <link rel="stylesheet" href="animations.css">
 </head>
 
-<body>
-    <!-- ------------ NAVBAR ---------- -->
-    <header>
-        <nav id="navbar">
-            <div class="logo">
-                <img src="images/logo.png" alt="">
+<body class="dark-theme">
+    <!-- Preloader -->
+    <!-- <div class="preloader">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Theme Switcher -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
             </div>
-            <!-- hamberger-lines -->
-            <input type="checkbox" class="checkbox">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
+        </label>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="#" class="logo">
+                    <span class="logo-text">MC<span class="accent">.</span></span>
+                </a>
             </div>
-            <ul class="nav-items">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+            <div class="header__menu">
+                <nav class="nav" id="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                        <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- ------------ HOME SECTION ---------- -->
-    <section id="home">
-        <div class="text-holder">
-            <h1>Mehul <span>Chauhan</span></h1>
-            <h3><span>Web Devloper </span>Based in Gujrat,India</h3>
-            <div class="button">
-                <button class="btn">
-                    <a href="#skills">View My Work</a>
-                </button>
-            </div>
-        </div>
-        <div class="hero-img">
-            <img src="images/Pb.png" alt="">
-        </div>  
-        <div class="social-icons">
-            <ul class="wrapper">
-                <li class="icon github" onclick="window.location.href = 'https://github.com/Mehulchauhan22';">
-                    <span class="tooltip">GitHub</span>
-                    <span><i class="fab fa-github" ></i></span>
-                </li>
-            </ul>
-            <ul class="wrapper">
-                <li class="icon twitter" onclick="window.location.href = 'https://twitter.com';">
-                    <span class="tooltip">Twitter</span>
-                    <span><i class="fab fa-twitter"></i></span>
-                </li>
-            </ul>
-            <ul class="wrapper">
-                <li class="icon youtube" onclick="window.location.href = 'https://youtube.com'">
-                    <span class="tooltip">Youtube</span>
-                    <span><i class="fab fa-youtube"></i></span>
-                </li>
-            </ul>
-            <ul class="wrapper">
-                <li class="icon instagram" onclick="window.location.href = 'https://instagram.com';">
-                    <span class="tooltip">Instagram</span>
-                    <span><i class="fab fa-instagram"></i></span>
-                </li>
-            </ul>
-            <ul class="wrapper">
-                <li class="icon facebook" onclick="window.location.href = 'https://facebookcom';">
-                    <span class="tooltip">Facebook</span>
-                    <span><i class="fab fa-facebook-f"></i></span>
-                </li>
-            </ul>
-        </div>
-        <!-- <div class="social-icons">
-            <li>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </li>
-        </div> -->
-        <div class="scroll-txt">
-            <a href="#about">Scroll</a>
-        </div>
-    </section>
-
-    <!-- ------------ ABOUT SECTION ---------- -->
-    <section id="about">
-        <div class="container">
-            <div class="about-img">
-                <img src="images/Pb.png" alt="">
-            </div>
-            <div class="text-wrapper">
-                <h4>Mehulsinh M. Chauhan</h4>
-                <h5>A Lead <span> Graphic Designer</span> based in <span>Gujrat,India</span></h5>
-                <p>I design and devlop services for customer of all sizes, specializing in creating stylish, modern
-                    websites, web services and online stores. My passion is ti design user experiences though the
-                    boldinterface and meaningful interactions.
-                </p>
-                <div class="about-list">
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Birthday</label>
-                        <p>5th Dec 2004</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">E-mail</label>
-                        <p>123@abc.com</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Age</label>
-                        <p>18 Year</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Phone</label>
-                        <p>+91 95585-14990</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Residence</label>
-                        <p>Time Square</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Skype</label>
-                        <p>skype.0404</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Address</label>
-                        <p>Gujrat , India </p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                    <!-- ---List Item Start--- -->
-                    <div class="list-item">
-                        <label for="">Freelance</label>
-                        <p>Available</p>
-                    </div>
-                    <!-- ---List Item End--- -->
-
-                </div>
-                <button class="btn"><a href="images/resume-Mehulsinh_chauhan.pdf" download>Download Resume</a></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- ------------ SERVICES SECTION ---------- -->
-    <section id="services">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2> My Services</h2>
-            </div>
-            <div class="animated-bar"></div>
-            <div class="sub-heading">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, soluta aliquid reiciendis ex
-                    nulla dolorem? Magni, nisi illo adipisci aspernatur ab, rerum in, sunt harum iusto ad minima
-                    officiis labore.
-                </p>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fas fa-pen-to-square"></i>
-                    <h5>Devlopment</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fas fa-pen-ruler"></i>
-                    <h5>Graphic</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fa fa-pied-piper"></i>
-                    <h5>Logo Design</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fas fa-mobile-screen-button"></i>
-                    <h5>App Design</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fas fa-globe"></i>
-                    <h5>Branding</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-            <!-- --- Services Card Start--- -->
-            <div class="service-card">
-                <div class="card-content">
-                    <i class="fas fa-fill-drip"></i>
-                    <h5>Web Design</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi molestias laboriosam unde illum
-                        suscipit nulla omnis quaerat sunt doloremque?</p>
-                </div>
-            </div>
-            <!-- --- Services Card End--- -->
-
-        </div>
-    </section>
-
-    <!-- ------------ RESUME SECTION ---------- -->
-    <section id="resume">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2>Resume</h2>
-            </div>
-            <div class="animated-bar"></div>
-            <div class="sub-heading">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, soluta aliquid reiciendis ex
-                    nulla dolorem? Magni, nisi illo adipisci aspernatur ab, rerum in, sunt harum iusto ad minima
-                    officiis labore.
-                </p>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <!-- ------------ EXPERINCE PART  ---------- -->
-            <div class="experience">
-                <div class="title">
-                    <h4>Experience</h4>
-                </div>
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Software Engineer</h5>
-                    <span>Adobe / 2015 - 2017</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Back-End Developer</h5>
-                    <span>Adobe / 2017 - 2019</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Graphic Designer</h5>
-                    <span>Adobe / 2019 - Present</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-            </div>
-
-
-            <!-- ------------ EDUCATION PART  ---------- -->
-            <div class="education">
-                <div class="title">
-                    <h4>Education</h4>
-                </div>
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Computer Science</h5>
-                    <span>Ganpat University / 2009 - 2014</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Bachelor Degree</h5>
-                    <span>Ganpat University / 2009 - 2014</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-
-                <!-- ---Resume Item Start--- -->
-                <div class="resume-item">
-                    <div class="item-arrow"></div>
-                    <h5>Master Degree</h5>
-                    <span>Nirma University / 2012 - 2016</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia exercitationem incidunt veniam
-                        omnis.</p>
-                </div>
-                <!-- ---Resume Item End--- -->
-            </div>
-        </div>
-
-        <!-- --- SKILL SECTION--- -->
-        <section id="skills">
-            <div class="heading-wrapper">
-                <div class="heading">
-                    <h2>My Skills</h2>
-                </div>
-                <div class="animated-bar"></div>
-            </div>
-
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
             <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <span class="hero__subtitle">Hello, I'm</span>
+                        <h1 class="hero__title">Mehulsinh <span class="accent">Chauhan</span></h1>
+                        <h2 class="hero__profession">Full-Stack Developer</h2>
+                        <p class="hero__description">
+                            I create exceptional digital experiences with modern technologies,
+                            focusing on intuitive design and high-performance code.
+                        </p>
 
-                <!-- ---PROGRESS ITEM START1--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>Html</h5>
+                        <div class="hero__buttons">
+                            <a href="#contact" class="btn btn-primary">Hire Me</a>
+                            <a href="resume/Mehul_Chauhan_Resume_2025.pdf" class="btn btn-outline" download>Download
+                                CV</a>
+                        </div>
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress-line html"></div>
+
+                    <div class="hero__image">
+                        <div class="image-frame">
+                            <img src="images/profile.png" alt="Mehul Chauhan - Full Stack Developer">
+                        </div>
+
+                        <div class="tech-icons">
+                            <div class="tech-icon" title="React"><img src="images/tech/react-svgrepo-com.svg"
+                                    alt="React"></div>
+                            <div class="tech-icon" title="Node.js"><img src="images/tech/nodejs-icon-svgrepo-com.svg"
+                                    alt="Node.js"></div>
+                            <div class="tech-icon" title="TypeScript"><img src="images/tech/typescript-svgrepo-com.svg"
+                                    alt="TypeScript"></div>
+                            <div class="tech-icon" title="Next.js"><img src="images/tech/nextjs-svgrepo-com.svg"
+                                    alt="Next.js">
+                            </div>
+                            <div class="tech-icon" title="MongoDB"><img src="images/tech/mongo-svgrepo-com.svg"
+                                    alt="MongoDB">
+                            </div>
+                            <div class="tech-icon" title="Docker"><img src="images/tech/docker-icon-svgrepo-com.svg"
+                                    alt="Docker">
+                            </div>
+                            <div class="tech-icon" title="Git"><img src="images/tech/git-svgrepo-com.svg" alt="Git">
+                            </div>
+                            <div class="tech-icon" title="Tailwindcss"><img
+                                    src="images/tech/tailwindcss-icon-svgrepo-com.svg" alt="Tailwindcss">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- ---PROGRESS ITEM END1--- -->
 
-                <!-- ---PROGRESS ITEM START2--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>CSS</h5>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-line css"></div>
-                    </div>
+                <div class="hero__scroll">
+                    <a href="#about" class="scroll-btn">
+                        <span class="scroll-text">Scroll Down</span>
+                        <span class="scroll-icon"><i class="fas fa-chevron-down"></i></span>
+                    </a>
                 </div>
-                <!-- ---PROGRESS ITEM END2--- -->
 
-                <!-- ---PROGRESS ITEM START3--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>JavaScript</h5>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-line js"></div>
-                    </div>
+                <div class="hero__social">
+                    <a href="https://github.com/MehulChauhan-22" target="_blank" class="social-icon"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mehulchauhan-22" target="_blank" class="social-icon"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/mehulchauhan_22" target="_blank" class="social-icon"
+                        aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/mehulchauhan_22" target="_blank" class="social-icon"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-                <!-- ---PROGRESS ITEM END3--- -->
-
-                <!-- ---PROGRESS ITEM START4--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>Python</h5>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-line python"></div>
-                    </div>
-                </div>
-                <!-- ---PROGRESS ITEM END4--- -->
-
-                <!-- ---PROGRESS ITEM START5--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>Django</h5>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-line django"></div>
-                    </div>
-                </div>
-                <!-- ---PROGRESS ITEM END5--- -->
-
-                <!-- ---PROGRESS ITEM START6--- -->
-                <div class="progress-item">
-                    <div class="text">
-                        <h5>React</h5>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-line react"></div>
-                    </div>
-                </div>
-                <!-- ---PROGRESS ITEM END6--- -->
             </div>
         </section>
 
-    </section>
-    <!-- ------------ PORTFOLIO SECTION ---------- -->
-    <section id="portfolio">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2>Portfolio</h2>
-            </div>
-            <div class="animated-bar"></div>
-            <div class="sub-heading">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, soluta aliquid reiciendis ex
-                    nulla dolorem? Magni, nisi illo adipisci aspernatur ab, rerum in, sunt harum iusto ad minima
-                    officiis labore.
-                </p>
-            </div>
-        </div>
-
-        <!-- ------------ GALLERY ---------- -->
-        <div class="gallery-wrapper">
-            <div class="gallery-nav">
-                <div class="gallery-filter">
-                    <span class="filter-item active" data-filter="all">All</span>
-                    <span class="filter-item" data-filter="brand">Brand</span>
-                    <span class="filter-item" data-filter="design">Design</span>
-                    <span class="filter-item" data-filter="photos">Photos</span>
-                </div>
-            </div>
+        <!-- About Section -->
+        <section class="section about" id="about">
             <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">About Me</span>
+                    <h2 class="section__title">Get to Know Me</h2>
+                </div>
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item brand">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="brand">
-                        <div class="overlay">
-                            <h5>Brand #1</h5>
-                            <p>More Info</p>
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="images/20250317_131749.jpg" alt="Mehul Chauhan working on development">
+
+                        <div class="experience-badge">
+                            <span class="number">3+</span>
+                            <span class="text">Years of Experience</span>
+                        </div>
+                    </div>
+
+                    <div class="about__text">
+                        <h3>Full-Stack Developer & UI/UX Designer</h3>
+
+                        <p>
+                            Hello! I'm Mehul, a passionate Full-Stack Developer based in Gujarat, India. With over 3
+                            years
+                            of experience, I specialize in creating modern web applications using React, Next.js,
+                            Node.js,
+                            and other cutting-edge technologies.
+                        </p>
+
+                        <p>
+                            My journey in web development began during my university studies, where I discovered my
+                            passion for building digital experiences. Since then, I've worked with numerous clients
+                            and companies to deliver high-quality, user-centered solutions that solve real-world
+                            problems.
+                        </p>
+
+                        <div class="about__info">
+                            <div class="info-item">
+                                <span class="info-title">Name:</span>
+                                <span class="info-value">Mehulsinh M. Chauhan</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-title">Email:</span>
+                                <span class="info-value">mehulsinh1975@gmail.com</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-title">Phone:</span>
+                                <span class="info-value">+91 95585 14990</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-title">Location:</span>
+                                <span class="info-value">Ahmedabad, Gujarat, India</span>
+                            </div>
+
+                            <div class="info-item">
+                                <span class="info-title">Availability:</span>
+                                <span class="info-value">Open for Freelance</span>
+                            </div>
+                        </div>
+
+                        <div class="about__buttons">
+                            <a href="#contact" class="btn btn-primary">Contact Me</a>
                         </div>
                     </div>
                 </div>
-                <!-- --- GALLERY ITEM END --- -->
+            </div>
+        </section>
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item design">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="design">
-                        <div class="overlay">
-                            <h5>Design #1</h5>
-                            <p>More Info</p>
+        <!-- Services Section -->
+        <section class="section services">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Services</span>
+                    <h2 class="section__title">What I Offer</h2>
+                </div>
+
+                <div class="services__grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
                         </div>
+                        <h3>Frontend Development</h3>
+                        <p>
+                            Building responsive, accessible, and performant user interfaces with
+                            modern frameworks like React, Next.js, and state-of-the-art CSS.
+                        </p>
                     </div>
-                </div>
-                <!-- --- GALLERY ITEM END --- -->
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item photos">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="photos">
-                        <div class="overlay">
-                            <h5>Photos #1</h5>
-                            <p>More Info</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
                         </div>
+                        <h3>Backend Development</h3>
+                        <p>
+                            Creating robust server-side applications with Node.js, Express,
+                            MongoDB, and RESTful or GraphQL APIs.
+                        </p>
                     </div>
-                </div>
-                <!-- --- GALLERY ITEM END --- -->
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item brand">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="brand">
-                        <div class="overlay">
-                            <h5>Brand #2</h5>
-                            <p>More Info</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
                         </div>
+                        <h3>UI/UX Design</h3>
+                        <p>
+                            Designing intuitive and beautiful user experiences with careful attention
+                            to usability, accessibility, and brand identity.
+                        </p>
                     </div>
-                </div>
-                <!-- --- GALLERY ITEM END --- -->
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item design">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="design">
-                        <div class="overlay">
-                            <h5>Design #2</h5>
-                            <p>More Info</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
                         </div>
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Ensuring websites look and function perfectly across all devices and
+                            screen sizes through modern responsive design techniques.
+                        </p>
                     </div>
-                </div>
-                <!-- --- GALLERY ITEM END --- -->
 
-                <!-- --- GALLERY ITEM START --- -->
-                <div class="gallery-item photos">
-                    <div class="gallery-item-inner">
-                        <img src="images/img.jpeg" alt="photos">
-                        <div class="overlay">
-                            <h5>Photos #2</h5>
-                            <p>More Info</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
                         </div>
+                        <h3>SEO Optimization</h3>
+                        <p>
+                            Implementing best practices to improve search engine visibility,
+                            performance, and content optimization for better rankings.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Website Maintenance</h3>
+                        <p>
+                            Providing ongoing support, security updates, performance monitoring,
+                            and content updates to keep your website running smoothly.
+                        </p>
                     </div>
                 </div>
-                <!-- --- GALLERY ITEM END --- -->
             </div>
+        </section>
 
-        </div>
-        </div>
-    </section>
-
-    
-    <!-- ------------ BLOGS SECTION ---------- -->
-    <section id="blogs">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2>Recent News</h2>
-            </div>
-            <div class="animated-bar"></div>
-            <div class="sub-heading">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus, soluta aliquid reiciendis ex
-                    nulla dolorem? Magni, nisi illo adipisci aspernatur ab, rerum in, sunt harum iusto ad minima
-                    officiis labore.
-                </p>
-            </div>
-        </div>
-        <div class="container">
-
-            <!-- -------- BLOG START ---------- -->
-            <div class="blog blog-1">
-                <div class="img-box">
-                    <img src="images/smiley.jpeg" alt="">
-                </div>
-                <h6>Ten Mind-Blowing Reason why Design Is Using This Technique For Exposure.</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nulla</p>
-                <button><a href="#">Read More</a></button>
-            </div>
-            <!-- -------- BLOG END ---------- -->
-
-            <!-- -------- BLOG START ---------- -->
-            <div class="blog blog-2">
-                <div class="img-box">
-                    <img src="images/smiley1.jpeg" alt="">
-                </div>
-                <h6>Ten Mind-Blowing Reason why Design Is Using This Technique For Exposure.</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nulla</p>
-                <button><a href="#">Read More</a></button>
-            </div>
-            <!-- -------- BLOG END ---------- -->
-
-            <!-- -------- BLOG START ---------- -->
-            <div class="blog blog-3">
-                <div class="img-box">
-                    <img src="images/smiley2.jpeg" alt="">
-                </div>
-                <h6>Ten Mind-Blowing Reason why Design Is Using This Technique For Exposure.</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis nulla</p>
-                <button><a href="#">Read More</a></button>
-            </div>
-        </div>
-        <!-- -------- BLOG END ---------- -->
-    </section>
-
-
-    <!-- ------------ CONTACT SECTION ---------- -->
-    <section id="contact">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2>Get in Out</h2>
-            </div>
-            <div class="animated-bar"></div>
-        </div>
-
-        <div class="container">
-            <form action="#">
-                <div class="title">
-                    <h4>Message Me</h4>
-                </div>
-
-                <div class="form-row">
-                    <div class="input-data">
-                        <input type="text" placeholder="Name" required>
-                    </div>
-                    <div class="input-data">
-                        <input type="text" placeholder="E-Mail" required>
-                    </div>
-                </div>
-
-                <div class="input-data">
-                    <input type="text" placeholder="Subject" required>
-                </div>
-
-                <div class="input-data">
-                    <textarea name="Massege" placeholder="massage" required></textarea>
-                </div>
-                <div class="form-row">
-
-                    <input type="submit" value="Send Your Massgae" class="btn">
-
-                </div>
-            </form>
-
-
-
-            <div class="contact-info">
-                <div class="title">
-                    <h4>Contact Info</h4>
-                </div>
-                <div class="subtitle">
-                    <p>Always available for freelance work if the right project comes along, Fell free to contact me!
+        <!-- Skills Section -->
+        <!-- Skills Section Redesign - Complete with all tabs -->
+        <section class="section skills" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Skills</span>
+                    <h2 class="section__title">Technical Expertise</h2>
+                    <p class="section__description">
+                        I focus on using modern technologies to build scalable, efficient, and user-friendly
+                        applications.
+                        Here's a breakdown of my technical toolkit:
                     </p>
                 </div>
 
-                <ul class="contact-list">
-
-                    <!-- --- LIST ITEM START --- -->
-                    <li class="list-item">
-                        <div class="icon">
-                            <i class="fa-brands fa-hive"></i>
+                <div class="skills__content">
+                    <div class="skills__tabs">
+                        <div class="tab-headers">
+                            <button class="tab-btn active" data-target="frontend">Frontend</button>
+                            <button class="tab-btn" data-target="backend">Backend</button>
+                            <button class="tab-btn" data-target="tools">Tools & Methodologies</button>
                         </div>
-                        <div class="details">
-                            <label for="#">Name</label>
-                            <p>Mehulsinh M. Chauhan</p>
+
+                        <div class="tab-content">
+                            <!-- Frontend Skills -->
+                            <div class="tab-pane active" id="frontend">
+                                <div class="skills-grid">
+
+                                    <!-- HTML/CSS Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/html5-svgrepo-com.svg" alt="HTML" />
+                                            <img src="images/skills/css3-svgrepo-com.svg" alt="CSS" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>HTML & CSS</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Semantic HTML5</li>
+                                                <li>CSS3 animations and transitions</li>
+                                                <li>Responsive design</li>
+                                                <li>CSS preprocessors (SASS, LESS)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+
+                                    <!-- JavaScript Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/js-official-svgrepo-com.svg" alt="JavaScript" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>JavaScript (ES6+)</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Asynchronous patterns</li>
+                                                <li>Modern JS features</li>
+                                                <li>DOM manipulation</li>
+                                                <li>Web APIs and browser APIs</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- TypeScript Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/typescript-official-svgrepo-com.svg"
+                                                alt="TypeScript" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>TypeScript</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Type systems and interfaces</li>
+                                                <li>Generics and utility types</li>
+                                                <li>Integration with React</li>
+                                                <li>Type-safe API consumption</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level intermediate">Intermediate</div>
+                                    </div>
+
+                                    <!-- Tailwind CSS Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/tailwindcss-icon-svgrepo-com.svg"
+                                                alt="Tailwind CSS" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Tailwind CSS</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Utility-first approach</li>
+                                                <li>Custom configurations</li>
+                                                <li>Responsive design</li>
+                                                <li>Performance optimization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level intermediate">Intermediate</div>
+                                    </div>
+
+                                    <!-- React Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/react-svgrepo-com.svg" alt="React" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>React & React Native</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Component architecture</li>
+                                                <li>State management (Redux, Context API)</li>
+                                                <li>Performance optimization</li>
+                                                <li>Custom hooks</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+
+                                    <!-- Next.js Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/nextjs-fill-svgrepo-com.svg" alt="Next.js" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Next.js</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Server-side rendering</li>
+                                                <li>Static site generation</li>
+                                                <li>API routes</li>
+                                                <li>Image optimization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level intermediate">Intermediate</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Backend Skills -->
+                            <div class="tab-pane" id="backend">
+                                <div class="skills-grid">
+                                    <!-- Node.js Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/nodejs-icon-svgrepo-com.svg" alt="Node.js" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Node.js</h4>
+                                            <ul class="skill-card__list">
+                                                <li>RESTful API development</li>
+                                                <li>Express.js framework</li>
+                                                <li>Middleware architecture</li>
+                                                <li>Authentication systems</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- MongoDB Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/mongodb-svgrepo-com.svg" alt="MongoDB" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>MongoDB</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Schema design</li>
+                                                <li>CRUD operations</li>
+                                                <li>Aggregation framework</li>
+                                                <li>MongoDB Atlas</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- Firebase Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/firebase-svgrepo-com.svg" alt="Firebase" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Firebase</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Firestore & Realtime Database</li>
+                                                <li>Authentication</li>
+                                                <li>Cloud Functions</li>
+                                                <li>Storage & Hosting</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- API Development Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/api-svgrepo-com.svg" alt="API" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>API Development</h4>
+                                            <ul class="skill-card__list">
+                                                <li>RESTful principles</li>
+                                                <li>API security</li>
+                                                <li>Rate limiting & caching</li>
+                                                <li>Documentation (Swagger/OpenAPI)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- SQL Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/mysql-svgrepo-com.svg" alt="SQL" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>SQL Databases</h4>
+                                            <ul class="skill-card__list">
+                                                <li>PostgreSQL</li>
+                                                <li>Database design</li>
+                                                <li>Query optimization</li>
+                                                <li>Transactions & migrations</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level intermediate">Intermediate</div>
+                                    </div>
+
+                                    <!-- GraphQL Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/graphql-svgrepo-com.svg" alt="GraphQL" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>GraphQL</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Schema design</li>
+                                                <li>Resolvers</li>
+                                                <li>Apollo Server</li>
+                                                <li>Integration with React</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level beginner">Beginner</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tools & Methodologies -->
+                            <div class="tab-pane" id="tools">
+                                <div class="skills-grid">
+                                    <!-- Git & GitHub Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/git-svgrepo-com.svg" alt="Git" />
+                                            <img src="images/skills/github-142-svgrepo-com.svg" alt="GitHub" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Git & GitHub</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Version control workflows</li>
+                                                <li>Branching strategies</li>
+                                                <li>Pull requests & code reviews</li>
+                                                <li>CI/CD integration</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- Docker Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/docker-svgrepo-com.svg" alt="Docker" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Docker</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Containerization</li>
+                                                <li>Docker Compose</li>
+                                                <li>CI/CD integration</li>
+                                                <li>Multi-container applications</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level beginner">Beginner</div>
+                                    </div>
+
+                                    <!-- Testing Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/postman-icon-svgrepo-com.svg" alt="Testing" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Testing</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Jest & React Testing Library</li>
+                                                <li>Cypress for E2E testing</li>
+                                                <li>TDD methodology</li>
+                                                <li>Test coverage analysis</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level advanced">Advanced</div>
+                                    </div>
+
+                                    <!-- CI/CD Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/ci-cd-svgrepo-com.svg" alt="CI/CD" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>CI/CD</h4>
+                                            <ul class="skill-card__list">
+                                                <li>GitHub Actions</li>
+                                                <li>Continuous integration</li>
+                                                <li>Automated deployment</li>
+                                                <li>Build pipeline optimization</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level beginner">Beginner</div>
+                                    </div>
+
+                                    <!-- UI/UX Design Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/figma-svgrepo-com.svg" alt="UI/UX Design" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>UI/UX Design</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Figma</li>
+                                                <li>User-centered design</li>
+                                                <li>Wireframing & prototyping</li>
+                                                <li>Design systems</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level intermediate">Intermediate</div>
+                                    </div>
+
+                                    <!-- Agile Methodology Skill Card -->
+                                    <div class="skill-card">
+                                        <div class="skill-card__icon">
+                                            <img src="images/skills/agile.svg" alt="Agile" />
+                                        </div>
+                                        <div class="skill-card__content">
+                                            <h4>Agile Methodology</h4>
+                                            <ul class="skill-card__list">
+                                                <li>Scrum framework</li>
+                                                <li>Sprint planning & reviews</li>
+                                                <li>Kanban boards</li>
+                                                <li>Iterative development</li>
+                                            </ul>
+                                        </div>
+                                        <div class="skill-card__level beginner">Beginner</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <!-- --- LIST ITEM START --- -->
+                    </div>
 
-
-                    <!-- --- LIST ITEM START --- -->
-                    <li class="list-item">
-                        <div class="icon">
-                            <i class="fas fa-globe"></i>
+                    <!-- Recent Technologies -->
+                    <div class="recent-technologies">
+                        <h3>Recently Worked With</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">Framer Motion</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">tRPC</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">Vercel</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
-                        <div class="details">
-                            <label for="#">Location</label>
-                            <p>Gujrat, India</p>
+                    </div>
+
+                    <!-- Projects By Technology -->
+                    <div class="projects-by-tech">
+                        <h3>See My Work With These Technologies</h3>
+                        <div class="tech-project-links">
+                            <a href="#portfolio" class="tech-project-link" data-filter="react">
+                                <span class="tech-name">React</span>
+                                <span class="project-count">4 projects</span>
+                                <span class="view-text">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="#portfolio" class="tech-project-link" data-filter="node">
+                                <span class="tech-name">Node.js</span>
+                                <span class="project-count">3 projects</span>
+                                <span class="view-text">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </a>
+                            <a href="#portfolio" class="tech-project-link" data-filter="mongodb">
+                                <span class="tech-name">MongoDB</span>
+                                <span class="project-count">2 projects</span>
+                                <span class="view-text">View Projects <i class="fas fa-arrow-right"></i></span>
+                            </a>
                         </div>
-                    </li>
-                    <!-- --- LIST ITEM START --- -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Portfolio Section -->
+        <section class="section portfolio" id="portfolio">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Work</span>
+                    <h2 class="section__title">Featured Projects</h2>
+                </div>
 
-                    <!-- --- LIST ITEM START --- -->
-                    <li class="list-item">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
+                <div class="portfolio__filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web App</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design">UI Design</button>
+                </div>
+
+                <div class="portfolio__grid">
+                    <!-- Project 1 -->
+                    <div class="portfolio__item" data-category="web">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/bookstore-app.jpg" alt="BookNest - Online Bookstore">
                         </div>
-                        <div class="details">
-                            <label for="#">Call Me</label>
-                            <p>+91 95585 14990</p>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>BookNest</h3>
+                                <p>Full-stack Online Bookstore</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-1" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://booknest-demo.vercel.app" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <!-- --- LIST ITEM START --- -->
+                    </div>
 
-
-                    <!-- --- LIST ITEM START --- -->
-                    <li class="list-item">
-                        <div class="icon">
-                            <i class="fa-brands fa-at"></i>
+                    <!-- Project 2 -->
+                    <div class="portfolio__item" data-category="mobile">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/fitness-app.jpg" alt="FitTrack - Fitness Tracking App">
                         </div>
-                        <div class="details">
-                            <label for="#">Email</label>
-                            <p>mehulshih1975@gmail.com</p>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>FitTrack</h3>
+                                <p>Fitness Tracking Mobile App</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-2" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://fittrack-demo.netlify.app" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </li>
-                    <!-- --- LIST ITEM START --- -->
+                    </div>
 
+                    <!-- Project 3 -->
+                    <div class="portfolio__item" data-category="web">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/finance-dashboard.jpg" alt="FinDash - Financial Dashboard">
+                        </div>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>FinDash</h3>
+                                <p>Financial Analytics Dashboard</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-3" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://findash-demo.vercel.app" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                </ul>
+                    <!-- Project 4 -->
+                    <div class="portfolio__item" data-category="design">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/travel-ui.jpg" alt="Wanderlust - Travel App UI Design">
+                        </div>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>Wanderlust</h3>
+                                <p>Travel App UI Design</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-4" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://dribbble.com/shots/wanderlust-travel" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="portfolio__item" data-category="web">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/elearning-platform.jpg" alt="EduHub - E-Learning Platform">
+                        </div>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>EduHub</h3>
+                                <p>E-Learning Platform</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-5" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://eduhub-demo.vercel.app" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="portfolio__item" data-category="design">
+                        <div class="portfolio__img">
+                            <img src="images/portfolio/crypto-dashboard.jpg"
+                                alt="CryptoTrack - Cryptocurrency Dashboard">
+                        </div>
+                        <div class="portfolio__hover">
+                            <div class="portfolio__info">
+                                <h3>CryptoTrack</h3>
+                                <p>Cryptocurrency Dashboard</p>
+                                <div class="portfolio__links">
+                                    <a href="#portfolio-modal-6" class="portfolio__details-btn">
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <a href="https://cryptotrack-demo.netlify.app" target="_blank"
+                                        class="portfolio__live-btn">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__btn">
+                    <a href="https://github.com/MehulChauhan-22" target="_blank" class="btn btn-outline">
+                        View More Projects
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Client Reviews</span>
+                    <h2 class="section__title">What People Say</h2>
+                </div>
+
+                <div class="testimonial__slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial__item">
+                        <div class="testimonial__content">
+                            <div class="testimonial__icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                Working with Mehul was a game-changer for our business. He created a website that
+                                perfectly
+                                captures our brand identity and is incredibly easy for our customers to navigate. His
+                                attention
+                                to detail and regular communication made the entire process smooth and enjoyable.
+                            </p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial__client">
+                            <div class="testimonial__image">
+                                <img src="images/testimonials/client1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4>Sarah Johnson</h4>
+                                <p>CEO at TechSolutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial__item">
+                        <div class="testimonial__content">
+                            <div class="testimonial__icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                Mehul delivered an exceptional e-commerce platform for my business. His technical skills
+                                combined with his eye for design resulted in a website that not only looks great but
+                                also
+                                performs brilliantly. Our sales have increased by 40% since launching the new site!
+                            </p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial__client">
+                            <div class="testimonial__image">
+                                <img src="images/testimonials/client2.jpg" alt="Michael Brown">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4>Michael Brown</h4>
+                                <p>Founder at StyleHouse</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial__item">
+                        <div class="testimonial__content">
+                            <div class="testimonial__icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="testimonial__text">
+                                I've worked with many developers, but Mehul truly stands out. He transformed our
+                                outdated
+                                web application into a modern, user-friendly platform. He's not just technically
+                                proficient,
+                                but also brings creative solutions to every challenge. Highly recommend his services!
+                            </p>
+                            <div class="testimonial__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial__client">
+                            <div class="testimonial__image">
+                                <img src="images/testimonials/client3.jpg" alt="Priya Sharma">
+                            </div>
+                            <div class="testimonial__info">
+                                <h4>Priya Sharma</h4>
+                                <p>CTO at InnovateTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial__controls">
+                    <button class="testimonial__arrow prev" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonial__dots"></div>
+                    <button class="testimonial__arrow next" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="section blog" id="blog">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">My Blog</span>
+                    <h2 class="section__title">Latest Articles</h2>
+                </div>
+
+                <div class="blog__grid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog__card">
+                        <div class="blog__image">
+                            <img src="images/blog/nextjs-performance.jpg"
+                                alt="Next.js Performance Optimization Techniques">
+                            <div class="blog__date">
+                                <span class="day">15</span>
+                                <span class="month">May</span>
+                            </div>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__category">Development</div>
+                            <h3 class="blog__title">
+                                <a href="blog-single.html">10 Advanced Next.js Performance Optimization Techniques</a>
+                            </h3>
+                            <p class="blog__excerpt">
+                                Learn how to significantly improve your Next.js application performance with these
+                                advanced optimization techniques...
+                            </p>
+                            <a href="blog-single.html" class="blog__link">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 2 -->
+                    <article class="blog__card">
+                        <div class="blog__image">
+                            <img src="images/blog/react-state-management.jpg" alt="React State Management in 2025">
+                            <div class="blog__date">
+                                <span class="day">02</span>
+                                <span class="month">Apr</span>
+                            </div>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__category">React</div>
+                            <h3 class="blog__title">
+                                <a href="blog-single.html">React State Management in 2025: What's New and What Works</a>
+                            </h3>
+                            <p class="blog__excerpt">
+                                Comparing modern state management libraries and approaches for React applications
+                                in 2025...
+                            </p>
+                            <a href="blog-single.html" class="blog__link">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 3 -->
+                    <article class="blog__card">
+                        <div class="blog__image">
+                            <img src="images/blog/ai-web-development.jpg" alt="AI in Web Development">
+                            <div class="blog__date">
+                                <span class="day">18</span>
+                                <span class="month">Mar</span>
+                            </div>
+                        </div>
+                        <div class="blog__content">
+                            <div class="blog__category">Technology</div>
+                            <h3 class="blog__title">
+                                <a href="blog-single.html">How AI is Transforming Web Development in 2025</a>
+                            </h3>
+                            <p class="blog__excerpt">
+                                Exploring the latest AI tools and technologies that are revolutionizing the way
+                                we build websites and applications...
+                            </p>
+                            <a href="blog-single.html" class="blog__link">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog__btn">
+                    <a href="blog.html" class="btn btn-outline">
+                        View All Articles
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__subtitle">Get In Touch</span>
+                    <h2 class="section__title">Contact Me</h2>
+                </div>
+
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__title">
+                            <h3>Let's work together!</h3>
+                            <p>
+                                Feel free to reach out if you're looking for a developer, have a question, or just want
+                                to connect.
+                            </p>
+                        </div>
+
+                        <div class="contact__details">
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact__text">
+                                    <h4>Email</h4>
+                                    <a href="mailto:mehulsinh1975@gmail.com">mehulsinh1975@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact__text">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+919558514990">+91 9558 514 990</a>
+                                </div>
+                            </div>
+
+                            <div class="contact__item">
+                                <div class="contact__icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact__text">
+                                    <h4>Location</h4>
+                                    <p>Ahmedabad, Gujarat, India</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__socials">
+                            <a href="https://github.com/MehulChauhan-22" target="_blank" class="social-link"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/mehulchauhan-22" target="_blank" class="social-link"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/mehulchauhan_22" target="_blank" class="social-link"
+                                aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/mehulchauhan_22" target="_blank" class="social-link"
+                                aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact__form-container">
+                        <form id="contact-form" class="contact__form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Enter your message"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+
+                            <div class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <a href="#" class="logo">
+                        <span class="logo-text">MC<span class="accent">.</span></span>
+                    </a>
+                </div>
+
+                <div class="footer__nav">
+                    <ul class="footer__menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__social">
+                    <a href="https://github.com/MehulChauhan-22" target="_blank" class="social-link"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/mehulchauhan-22" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://twitter.com/mehulchauhan_22" target="_blank" class="social-link"
+                        aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/mehulchauhan_22" target="_blank" class="social-link"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="copyright">
+                    &copy; <span id="current-year">2025</span> Mehul Chauhan. All Rights Reserved.
+                </p>
             </div>
         </div>
-    </section>
-    <!-- ------------ FOOTER ---------- -->
-    <footer>
-        <p>Mehulchauhan22 @copy all right reserved 2024 </p>
     </footer>
 
- <!-- ============Script =========== -->
-    <script src="script.js"> </script>
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Portfolio Modal 1 -->
+    <div id="portfolio-modal-1" class="portfolio-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <div class="modal-body">
+                <h2>BookNest - Online Bookstore</h2>
+
+                <div class="portfolio-details">
+                    <div class="portfolio-slider">
+                        <img src="images/portfolio/bookstore-app-1.jpg" alt="BookNest Homepage">
+                        <img src="images/portfolio/bookstore-app-2.jpg" alt="BookNest Product Page">
+                        <img src="images/portfolio/bookstore-app-3.jpg" alt="BookNest Checkout">
+                    </div>
+
+                    <div class="details-content">
+                        <div class="project-info">
+                            <ul>
+                                <li><strong>Client:</strong> BookNest Publishing</li>
+                                <li><strong>Date:</strong> January 2025</li>
+                                <li><strong>Category:</strong> Web Application</li>
+                                <li><strong>Technologies:</strong> Next.js, Node.js, MongoDB, Stripe</li>
+                                <li><strong>Live Link:</strong> <a href="https://booknest-demo.vercel.app"
+                                        target="_blank">View Live Demo</a></li>
+                                <li><strong>GitHub:</strong> <a href="https://github.com/MehulChauhan-22/booknest"
+                                        target="_blank">GitHub Repository</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="project-description">
+                            <h3>Project Overview</h3>
+                            <p>
+                                BookNest is a full-stack e-commerce platform for a fictional bookstore. This project
+                                features a comprehensive online shopping experience with book categories, user accounts,
+                                reviews, ratings, secure payment processing, and an admin dashboard.
+                            </p>
+
+                            <h3>Key Features</h3>
+                            <ul>
+                                <li>Responsive design optimized for all devices</li>
+                                <li>User authentication and profile management</li>
+                                <li>Advanced search and filtering options</li>
+                                <li>Shopping cart and wishlist functionality</li>
+                                <li>Secure payment processing with Stripe</li>
+                                <li>Admin dashboard for inventory management</li>
+                                <li>Book reviews and rating system</li>
+                            </ul>
+
+                            <h3>Technical Challenges</h3>
+                            <p>
+                                The main challenges in this project were implementing a fast and efficient search
+                                system, optimizing image loading for better performance, and creating a seamless
+                                checkout process. I implemented server-side rendering and API route optimization
+                                to ensure quick page loads and a smooth user experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add other portfolio modals similarly -->
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/testimonial-slider.js"></script>
+    <script src="js/theme-switch.js"></script>
+    <script src="js/skill-section.js"></script>
 </body>
 
 </html>
